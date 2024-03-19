@@ -1,0 +1,700 @@
+@charset "UTF-8";	
+
+html{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    background-color: rgb(15, 15, 140);
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#searchBox {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    gap: 10px;
+    height: 40px;
+    
+}
+
+#searchbutton {
+    width: 60px;
+    background-color:rgb(15, 15, 140) ;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin-left: 20px;
+}
+
+#searchbutton:hover {
+    background-color: rgb(109, 109, 198);
+}
+
+#buttons button{
+   margin-left: 20px;
+   ;
+   padding: 10px;
+   background-color: rgb(15, 15, 140);
+   border: none;
+   color: white;
+   font-size: 17px;
+}
+
+#buttons button:hover {
+    background-color: rgb(109, 109, 198); 
+    border-radius: 20px;
+}
+
+#searchbackground {
+    background-color:#F7BC00;
+    padding: 10px;
+}
+
+
+input[type="number"] {
+    width: 35px;
+    height: 25px;
+    margin-top: 6px;
+    margin-left: -9px;
+}
+
+
+
+input[type="text"] {
+    width: 120px; 
+    height: 25px;
+    margin-top: 6px;
+    margin-left: -9px;
+}
+
+input[type="date"] {
+    width: 120px;
+    height: 25px;
+    margin-top: 6px;
+    margin-left: -9px;
+}
+
+button {
+    background-color: rgb(111, 111, 177);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -40px;
+    
+}
+
+.sbild {
+    width: 450px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.mbild {
+    width: 200px;
+    height: 400px;
+    border: 3px black solid;
+    margin-top: 50px;
+    margin-left: 20px;
+    overflow: auto;
+}
+
+.sgallery {
+    display: inline;
+    position: relative;
+}
+
+.bild {
+    width: 112.5px;
+    height: 100px;
+    gap: none;
+    transition: 0.3s;
+}
+
+.bild:hover {
+    width: 250px;
+    height: 250px;
+}
+
+
+#firstpic {
+    margin-left: 150px;
+}
+
+
+
+.avalibility {
+    display: flex;
+    margin-left: 150px;
+    margin-right: 150px;
+    border: 1.5px black solid;
+    margin-bottom: 20px;
+}
+
+.room, .number, .include, .price, .book {
+    border: 1.5px black solid;
+    
+}
+
+h3 {
+    padding-top: -90px;
+
+}
+
+#drop-down {
+    display: flex;
+    cursor: pointer;
+    margin-left:150px;
+    gap: 70px;
+    font-size: 20px;
+    background-color: rgb(15, 15, 140);
+    margin-right: 150px;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#drop-content1 {
+   
+    width: 250px;
+    font-size: 15px;
+    padding: 10px;
+    list-style: inside;
+    background-color: rgb(246, 246, 218); 
+    border: 2px solid rgb(207, 207, 185);
+    border-radius: 10px;
+    
+}
+
+#drop-content2 {
+
+    width: 250px;
+    font-size: 15px;
+    padding: 10px;
+    list-style: inside;
+    background-color: rgb(246, 246, 218); 
+    border: 2px solid rgb(207, 207, 185);
+    border-radius: 10px;
+   
+}
+
+#drop-content3 { 
+    width: 250px;
+    font-size: 15px;
+    padding: 10px;
+    list-style: inside;
+    background-color: rgb(246, 246, 218); 
+    border: 2px solid rgb(207, 207, 185);
+    border-radius: 10px;
+}
+
+dialog {
+    position: fixed;
+}
+
+#drop-content1 li, #drop-content2 li, #drop-content3 li {
+    padding-bottom: 20px;
+}
+
+
+.x {
+    margin-left: 230px;
+    width: 20px;
+    font-size: 15px;
+    background-color: rgb(224, 224, 224);
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+    border: 1px solid;
+}
+
+.x:hover {
+    background-color: rgb(241, 241, 241); 
+}
+
+.drop-content.show {
+    display: block;
+}
+
+.information {
+    margin-left: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+}
+
+h2 {
+    margin-left: 150px;
+    margin-top: -5px;
+}
+
+h4 {
+    
+    margin-top: -5px;
+}
+
+#search {
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+h1, #adress {
+    margin-left: 40px;
+    
+}
+
+#starpic {
+    margin-left: 150px;
+    width: 80px;
+    margin-top: 10px;
+}
+
+#rating {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#rate {
+    display: flex;
+    height: 30px;
+    width: 230px;
+    background-color: rgba(143, 225, 20, 0.354);
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(20, 150, 20);
+    margin-top: 10px;
+}
+
+#adressbox {
+    display: flex;
+
+}
+
+#adressbox img {
+    height: 40px;
+    margin-left: 150px;
+    margin-top: -20px;
+}
+
+.box1 {
+    display: flex;
+    gap: 40px;
+    padding-left: 10px;
+    border-bottom: 2px black solid;
+}
+
+.ratingbox {
+    font-size: 20px;
+    background-color: rgb(96, 96, 198);
+    padding: 10px;
+    border-radius: 13px;
+    color: white;
+    border-bottom: 2px black solid;
+    border-right: 2px black solid;
+}
+
+.text1 {
+    margin-top: -40px;
+    margin-left: 10px;
+}
+
+.userpic {
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    margin-left: 10px;
+    border-radius: 100px;
+}
+
+.userbox {
+    display: flex;
+}
+
+.userbox p {
+    margin-top: 30px;
+    margin-left: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.boxtext {
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.box2 {
+    border-bottom: 2px black solid;
+}
+
+.dropbuttons {
+    padding: 20px;
+    color: white;
+}
+
+.dropbuttons:hover {
+    background-color: rgb(111, 111, 177) ;
+    border-radius: 20px;
+}
+
+#box3 {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 150px;
+    gap: 10px;
+    border: 2px #F7BC00 solid;
+    padding: 7px;
+    width: 946px;
+    border-radius: 2px;
+}
+
+#box3 p {
+    margin-left: 10px;
+    margin-right: -10px;
+}
+
+#box4 {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 150px;
+    gap: 10px;
+    border: 2px #F7BC00 solid;
+    padding: 7px;
+    width: 946px;
+    border-radius: 2px;
+}
+
+#button2 {
+    margin-left: 150px;
+    border: 2px #F7BC00 solid;
+    padding: 7px;
+    width: 964px;
+    border-radius: 2px;
+    
+}
+
+#button2:hover {
+    background-color:  rgb(15, 15, 140);
+}
+
+#button2 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#name1 {
+    background-color: rgb(15, 15, 140); 
+    padding: 20px;
+    margin-top: -0px;
+  
+}
+
+.avalibility h3 {
+    background-color: rgb(95, 95, 145) ;
+    color: white;
+    padding-left: 50px; 
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -0px;
+}
+
+.avalibility p {
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+.avalibility input[type="number"] {
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.book{
+    padding: 10px;
+}
+
+.book button {
+    width: 200px;
+    height: 70px;
+    color: white;
+    font-size: 30px;
+    background-color: rgb(84, 84, 202);
+    border-radius: 10px;
+}
+
+.book button:hover {
+    background-color: rgb(109, 109, 198);
+    
+}
+
+
+.numberbox1 {
+    display: flex;
+    margin-right: 10px;
+}
+
+.book p {
+    font-size: 13px;
+    color: rgb(27, 122, 27);
+}
+
+.check {
+    display: flex;
+    margin-top: 10px;
+}
+
+.imgcheck {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+.check p {
+    margin-left: -20px;
+}
+
+#endbox {
+    margin-top: 60px;
+    margin-left: 30px;
+    height: 200px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#endbox2 {
+    background-color: rgb(240, 236, 236);
+}
+
+#box3 input[type="date"] {
+    margin-left: 20px;
+}
+
+.arrowimg {
+    width: 30px;
+}
+
+.listbutton {
+    display: flex;
+    border: 1px black solid;
+    width: 118px;
+    margin-top: 10px;
+    padding: 2px;
+    background-color: rgb(231, 230, 230);
+    border-radius: 2px;
+}
+
+
+.bArrow {
+    width: 30px;
+}
+
+.listbutton:hover + .list {
+    display: block;
+    transform: 5s;
+}
+
+.list {
+    display: none;
+    margin-left: -35px;
+    list-style: disc;
+}
+
+.list li {
+    margin-top: 5px;
+}
+
+#errorbox1 {
+    display: none;
+    background-color: rgba(235, 194, 194, 0.418);
+    color: rgb(191, 28, 28);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(191, 28, 28) solid;
+    border-radius: 5px;
+}
+
+#errorbox2 {
+    display: none;
+    background-color: rgba(235, 194, 194, 0.418);
+    color: rgb(191, 28, 28);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(191, 28, 28) solid;
+    border-radius: 5px;
+}
+
+#errorbox3 {
+    display: none;
+    background-color: rgba(235, 194, 194, 0.418);
+    color: rgb(191, 28, 28);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(191, 28, 28) solid;
+    border-radius: 5px;
+}
+
+#errorbox4 {
+    display: none;
+    background-color: rgba(235, 194, 194, 0.418);
+    color: rgb(191, 28, 28);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(191, 28, 28) solid;
+    border-radius: 5px;
+}
+
+#errorbox5 {
+    display: none;
+    background-color: rgba(235, 194, 194, 0.418);
+    color: rgb(191, 28, 28);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(191, 28, 28) solid;
+    border-radius: 5px;
+}
+
+#errorbox6 {
+    display: none;
+    background-color: rgba(235, 194, 194, 0.418);
+    color: rgb(191, 28, 28);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(191, 28, 28) solid;
+    border-radius: 5px;
+}
+
+#errorbox7 {
+    display: none;
+    background-color: rgba(235, 194, 194, 0.418);
+    color: rgb(191, 28, 28);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(191, 28, 28) solid;
+    border-radius: 5px;
+}
+
+#errorbox8 {
+    display: none;
+    background-color: rgba(235, 194, 194, 0.418);
+    color: rgb(191, 28, 28);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(191, 28, 28) solid;
+    border-radius: 5px;
+}
+
+#ticketForm {
+    padding: 50px;
+    
+}
+
+#ticketBox {
+    background-color: rgb(222, 222, 235);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px rgb(78, 78, 125) solid;
+    font-size: 20px;
+    width: 500px;
+    margin-left: 300px;
+   
+}
+
+.boxbox {
+    margin-left: 20px;
+    width:200px;
+}
+
+#nameInput {
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+#personalNumberInput {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#countrySelect {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#emailInput {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#phoneInput {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#submitButton {
+    margin-left: 440px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    background-color:rgb(15, 15, 140);
+    border-radius: 5px;
+    border: 2px rgb(15, 15, 140) solid;
+}
+
+#submitButton:hover {
+    background-color: rgb(111, 114, 118);
+}
+
+#bookingBox {
+    background-color: rgb(222, 222, 235);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px rgb(78, 78, 125) solid;
+    font-size: 20px;
+    width: 500px;
+    margin-left: 350px;
+    margin-top: 20px;
+    margin-bottom: 200px;
+}
+
+#errorbox9 {
+    display: none;
+    background-color: rgba(183, 40, 40, 0.874);
+    color: rgb(235, 213, 213);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(223, 184, 184) solid;
+    border-radius: 5px;
+    margin-left: 1000px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+

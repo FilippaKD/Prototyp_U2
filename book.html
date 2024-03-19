@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+   <meta charset="utf-8">
+   <title>Book</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+</head>
+
+<body>
+
+   <div id="header">
+      <h1>Boka.com</h1>
+      <div id="buttons">
+         <button>Boende</button><button>Flyg</button><button>Flyg + hotell</button><button>Hyrbilar</button><button>Sevärdheter</button><button>Flygtaxi</button>
+      </div>
+   </div>
+
+   <div id="searchbackground">
+      <h2 id="search">Sök nytt resmål</h2>
+
+      <div id="searchBox">
+         <p class="text">Resmål/boendets namn:</p>
+         <input type="text">
+         <p class="text">Incheckning:</p>
+         <input type="date">
+         <p class="text">Utcheckning:</p>
+         <input type="date">
+         <p>Vuxna:</p><input type="number">
+         <p>Barn:</p><input type="number">
+         <p>Rum:</p><input type="number">
+         <button id="searchbutton">Sök</button>
+      </div>
+   </div> 
+
+   
+   <form id="ticketForm">
+      <div id="ticketBox">
+          <label for="name">Namn:</label>
+          <input type="text" id="nameInput" class="boxbox" required><br>
+  
+          <label for="personalNumber">Personnummer:</label>
+          <input type="text" id="personalNumberInput" class="boxbox" required><br>
+  
+          <label for="country">Land:</label>
+          <select id="countrySelect" class="boxbox">
+              <option value="Sverige">Sverige</option>
+              <option value="Norge">Norge</option>
+              <option value="Danmark">Danmark</option>
+              <option value="Finland">Finland</option>
+          </select><br>
+  
+          <label for="email">E-post:</label>
+          <input type="email" id="emailInput" class="boxbox" required><br>
+  
+          <label for="phone">Telefon:</label>
+          <input type="tel" id="phoneInput" class="boxbox" required><br>
+  
+          <button type="submit" id="submitButton" onclick="window.location.href='endPage.html'">Boka</button>
+      </div>
+  </form>
+
+  <div id="endbox2">
+   <hr>
+    <div id="endbox">
+    <p>Filippa Dagerhed</p>
+    <p>Interaktionsdesign 1</p>
+    <p>Uppgift 2 - Prototyp</p>
+    </div>
+
+
+</body>
+</html>

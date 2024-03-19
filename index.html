@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+   <meta charset="utf-8">
+   <title>Uppgift 2 - Prototyp</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+
+</head>
+
+<body>
+
+   <div id="header">
+      <h1>Boka.com</h1>
+      <div id="buttons">
+         <button>Boende</button><button>Flyg</button><button>Flyg + hotell</button><button>Hyrbilar</button><button>Sevärdheter</button><button>Flygtaxi</button>
+      </div>
+   </div>
+
+   <div id="searchbackground">
+      <h2 id="search">Sök nytt resmål</h2> <p id="errorbox9"></p>
+
+      <div id="searchBox">
+         <p class="text">Resmål/boendets namn:</p>
+         <input type="text">
+         <p class="text">Incheckning:</p>
+         <input type="date">
+         <p class="text">Utcheckning:</p>
+         <input type="date">
+         <p>Vuxna:</p><input type="number">
+         <p>Barn:</p><input type="number">
+         <p>Rum:</p><input type="number">
+         <button id="searchbutton">Sök</button>
+      </div>
+   </div>
+
+   <div id="rating">
+      <img id="starpic" src="img/sjärna.png" alt="sjärnor">
+      <div id="rate">
+         <img src="img/rating.png" alt="rating">
+         <p>Travel Sustainable-nivå 1</p>
+      </div>
+   </div>
+
+   <h2>Duplex M1 Le Valmont Alibi Hotell, Prag</h2>
+
+   <div id="adressbox">
+      <img src="img/pointer.png" alt="pointer">
+      <h4>Václavské nám. 21, 110 00 Nové Město, Tjeckien</h4>
+   </div>
+
+   <div class="gallery">
+      <img src="img/hotell.jpg" class="sbild" alt="bild på hotellet">
+
+
+      <img src="img/karta.png" alt= "karta" class="mbild">
+      
+
+      <div class="mbild">
+         <div class="box1">
+            <h3>Mycket bra</h3>
+            <p class="ratingbox">8,5</p>
+         </div>
+         <p class="text1">3 recensioner</p>
+         <div class="userbox">
+            <img src="img/Elina.jpg" alt="användarbild" class="userpic">
+            <p>Elina Borgman</p>
+         </div>
+         <div class="box2">
+            <p class="boxtext">Älskade att bo på detta hotellet och hade så kul i vackra prag. Minibaren var det bästa och älskade bastun.</p>
+         </div>
+
+
+         <div class="userbox">
+            <img src="img/Elin.jpg" alt="användarbild" class="userpic">
+            <p>Elin Sjöberg</p>
+         </div>
+         <div class="box2">
+            <p class="boxtext">Det bästa hotellet om du är fattig och student. Finns massor med billiga resturanger omkring speciellt en sushi resturang som var magisk.</p>
+         </div>
+
+         <div class="userbox">
+            <img src="img/Filippa.jpg" alt="användarbild" class="userpic">
+            <p>Filippa Dagerhed</p>
+         </div>
+         <div class="box2">
+            <p class="boxtext">Åk till prag om du vill ha den bästa resan någonsin. Hotellet var superfint men det enda onajs var att bäddsoffan jag sov på inte var så skön.</p>
+         </div>
+      </div>
+
+      <div class="sgallery">
+         <img src="img/kyrkanatt.jpg" class="bild" id="firstpic">
+      </div>
+      <img src="img/radhus.jpg" alt="radhus" class="bild">
+      <img src="img/hus.jpg" alt="litet hus" class="bild">
+      <img src="img/kyrka.jpg" class="bild">
+   </div>
+
+   
+   <div id="drop-down">
+<h3 class="dropbuttons" data-dialog-id="drop-content1">Faciliteter<img src="img/wArrow.png" class="arrowimg" alt="pil ner"></h3>
+
+   <h3 class="dropbuttons" data-dialog-id="drop-content2">Husregler<img src="img/wArrow.png" class="arrowimg" alt="pil ner"></h3>
+
+   <h3 class="dropbuttons" data-dialog-id="drop-content3">Viktig information<img class="arrowimg" src="img/wArrow.png" alt="pil ner"></h3>
+   </div>
+
+   <div id="dropboxes">
+      <dialog id="drop-content1">
+         <button class="x">X</button>
+         <ul>
+         <li>Stadsutsikt</li>
+         <li>Husdjur är välkomna</li>
+         <li>Pool</li>
+         <li>Gratis WiFi</li>
+         <li>Balkong</li>
+         <li>Badkar</li>
+         <li>Luftkonditionering</li>
+         <li>24-timmarsreception</li>
+         <li>Nyckelkort för att komma in</li>
+         <li>Daglig städning</li>
+         <li>Inomhuspool</li>
+         <li>Rökfria rum</li>
+         <li>Fitnesscenter</li>
+         <li>Rum/faciliteter för personer med funktionsnedsättning</li>
+         <li>Rumsservice</li>
+         <li>3 restauranger</li>
+         <li>Privat parkering</li>
+         <li>Te-/kaffekokare i alla rum</li>
+         <li>Bar</li>
+      </ul>
+      </dialog>
+
+      
+      <dialog id="drop-content2">
+         <button class="x">X</button>
+         <ul>
+         <li>Incheckning: Från kl. 16:00-23:00</li>
+         <li>Utcheckning: från kl.06:00-13:00</li>
+         <li>Avbokning: Aboka minst 24 h innan incheckning.</li>
+      </ul>
+      </dialog>
+
+      
+      <dialog id="drop-content3">
+         <button class="x">X</button>
+         <ul>
+         <li>1 husdjur per rum är okej men ej mer.</li>
+         <li>Uppvisa giltigt id när du checkar in.</li>
+         <li>Inga kontanter.</li>
+         </ul>
+      </dialog>
+   </div>
+
+   <div class="information">
+      <p>En massa text om hotellet så bra fin utsikt information information</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, in fuga praesentium possimus reprehenderit repudiandae, ab voluptatum dolor maiores, voluptas sint consequatur error fugiat culpa unde molestias numquam tempore! Omnis!</p>
+   </div>
+
+
+   <h2>Tillgänglighet</h2>
+
+   <div>
+      <div id="box3">
+         <p>Från</p><input type="date" id="checkInDate">
+         <p>Till</p><input type="date" id="checkOutDate"> <p id="errorbox1"></p><p id="errorbox7"></p>
+         <p id="errorbox8"></p>
+      </div>
+   </div>
+      <div id="box4">
+         <p>Vuxna:</p><input type="number" id="adultInput">
+         <p>Barn:</p><input type="number" id="childInput">
+         <p>Rum:</p><input type="number" id="roomInput">
+         <p id="errorbox2"></p>
+         <p id="errorbox3"></p>
+         <p id="errorbox4"></p>
+         <p id="errorbox5"></p>
+         <p id="errorbox6"></p>
+      </div>
+      <button id="button2">Sök</button>
+   </div>
+
+   <div id="hotellBoxes">
+   <div class="avalibility">
+      <div class="room">
+         <h3>Rumstyp</h3>
+         <p>4 sängar 27 kvadrat</p>
+         <p>För max 6 gäster</p>
+      </div>
+
+      <div class="include">
+         <h3>Inkluderar</h3>
+         <ul>
+            <li class="listbutton">Rum <img src="img/bArrow.png" alt="svart pil" class="bArrow"></li>
+            <ul class="list">
+               <li>Vårdeskåp</li>
+               <li>Lakan</li>
+               <li>Eluttag nära sängen</li>
+               <li>Värme</li>
+               <li>Garderob eller klädskåp</li>
+            </ul>
+            <li class="listbutton">Eget badrum <img src="img/bArrow.png" alt="svart pil" class="bArrow"></li>
+            <ul class="list">
+               <li>Gratis toalettartiklar</li>
+               <li>Toalett</li>
+               <li>Badkar eller dusch</li>
+               <li>Handdukar</li>
+               <li>Toalettpapper</li>
+            </ul>
+            <li class="listbutton">Apparater <img src="img/bArrow.png" alt="svart pil" class="bArrow"></li>
+            <ul class="list">
+               <li>Streamingtjänst</li>
+               <li>TV</li>
+               <li>Telefon</li>
+               <li>Strykmöjligheter</li>
+               <li>Satellitkanaler</li>
+               <li>Kaffe-/tekokare</li>
+               <li>Strykjärn</li>
+               <li>Radio</li>
+               <li>Pay per view-kanaler</li>
+            </ul>
+         </ul>
+      </div>
+
+   
+      <div class="number">
+         <h3>Antal</h3>
+         <div class="numberbox">
+            <div class="numberbox1">
+               <p>Vuxna:</p><p class="adult"></p>
+            </div>
+
+            <div class="numberbox1">
+               <p>Barn:</p><p class="child"></p>
+            </div>
+            <div class="numberbox1">
+               <p>Rum:</p><p class="room2"></p>
+            </div>
+            </div>
+      </div>
+
+      <div class="price">
+         <h3>Pris</h3>
+         <p id="price"></p>
+      </div>
+
+      <div class="book">
+         <button onclick="window.location.href='book.html'">BOKA</button>
+
+         <div class="check">
+            <img src="img/check.png" alt="checkmark" class="imgcheck">
+            <p>Ingår frukost</p>
+         </div>
+
+         <div class="check">
+            <img src="img/check.png" alt="checkmark" class="imgcheck">
+            <p>Gratis avbokning - innan kl. 16:00</P>
+         </div>
+
+         <div class="check">
+            <img src="img/check.png" alt="checkmark" class="imgcheck">
+            <p>Ingen förskottsbetalnings behövs - betala på boendet</P>
+         </div>
+
+      </div>
+   </div>
+
+   
+
+   <div class="avalibility">
+      <div class="room">
+         <h3>Rumstyp</h3>
+         <p>2 sängar 40 kvadrat</p>
+         <p>För max 4 gäster</p>
+      </div>
+
+      <div class="include">
+         <h3>Inkluderar</h3>
+         <ul>
+            <li class="listbutton">Rum <img src="img/bArrow.png" alt="svart pil" class="bArrow"></li>
+            <ul class="list">
+               <li>Vårdeskåp</li>
+               <li>Lakan</li>
+               <li>Eluttag nära sängen</li>
+               <li>Värme</li>
+               <li>Garderob eller klädskåp</li>
+            </ul>
+            <li class="listbutton">Eget badrum <img src="img/bArrow.png" alt="svart pil" class="bArrow"></li>
+            <ul class="list">
+               <li>Gratis toalettartiklar</li>
+               <li>Toalett</li>
+               <li>Badkar eller dusch</li>
+               <li>Handdukar</li>
+               <li>Toalettpapper</li>
+            </ul>
+            <li class="listbutton">Apparater <img src="img/bArrow.png" alt="svart pil" class="bArrow"></li>
+            <ul class="list">
+               <li>Streamingtjänst</li>
+               <li>TV</li>
+               <li>Telefon</li>
+               <li>Strykmöjligheter</li>
+               <li>Satellitkanaler</li>
+               <li>Kaffe-/tekokare</li>
+               <li>Strykjärn</li>
+               <li>Radio</li>
+               <li>Pay per view-kanaler</li>
+            </ul>
+         </ul>
+      </div>
+
+   
+      <div class="number">
+         <h3>Antal</h3>
+         <div class="numberbox">
+            <div class="numberbox1">
+               <p>Vuxna:</p><p class="adult"></p>
+            </div>
+
+            <div class="numberbox1">
+               <p>Barn:</p><p class="child"></p>
+            </div>
+            <div class="numberbox1">
+               <p>Rum:</p><p class="room2"></p>
+            </div>
+            </div>
+      </div>
+
+      <div class="price">
+         <h3>Pris</h3>
+         <p id="price2"></p>
+      </div>
+
+      <div class="book">
+         <button onclick="window.location.href='book.html'" >BOKA</button>
+
+         <div class="check">
+            <img src="img/check.png" alt="checkmark" class="imgcheck">
+            <p>Ingår frukost</p>
+         </div>
+
+         <div class="check">
+            <img src="img/check.png" alt="checkmark" class="imgcheck">
+            <p>Gratis avbokning - innan kl. 16:00</P>
+         </div>
+
+         <div class="check">
+            <img src="img/check.png" alt="checkmark" class="imgcheck">
+            <p>Ingen förskottsbetalnings behövs - betala på boendet</P>
+         </div>
+
+      </div>
+   </div>
+   </div>
+
+<div id="endbox2">
+  <hr>
+   <div id="endbox">
+   <p>Filippa Dagerhed</p>
+   <p>Interaktionsdesign 1</p>
+   <p>Uppgift 2 - Prototyp</p>
+   </div>
+
+</div>
+
+</body>
+
+</html>
