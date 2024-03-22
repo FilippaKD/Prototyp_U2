@@ -2,7 +2,7 @@
 
 
 
-let correctInfomation;
+let correctInfomation; // Koll på om all infomation är korrekt
 
 
 
@@ -18,7 +18,7 @@ function init() {
     searchBox.addEventListener("click", noInfo);
 
 
-    
+
 
     let dropButtons = document.querySelectorAll(".dropbuttons");
 
@@ -38,10 +38,10 @@ function init() {
         xbuttons[i].addEventListener("click", closeModal);
     }
 
-   
+
     let numberInputs = document.querySelectorAll("input[type='number']");
     for (let i = 0; i < numberInputs.length; i++) {
-        numberInputs[i].value = 0; 
+        numberInputs[i].value = 0;
         numberInputs[i].addEventListener("input", function () {
             let value = parseInt(this.value);
             if (isNaN(value) || value < 0) {
@@ -49,7 +49,7 @@ function init() {
             }
 
         });
-        
+
     }
 
 
@@ -61,14 +61,14 @@ function init() {
     validateAdults(adultInput, 3, "Vuxna");
     validateChildren(childInput, 3, "Barn");
     validateRooms(roomInput, 3);
-    
+
 
     let button2 = document.querySelector("#button2");
-button2.addEventListener("click", function () {
+    button2.addEventListener("click", function () {
 
-    validateRoom();
+        validateRoom();
 
-    correctInfomation = true;
+        correctInfomation = true;
         validateDates();
         validateAdults(adultInput, 3, "Vuxna");
         validateChildren(childInput, 3, "Barn");
@@ -85,9 +85,22 @@ button2.addEventListener("click", function () {
         }
 
 
-});
+    });
 
 
+    let dropButtons2 = document.querySelectorAll(".listbutton");
+
+    dropButtons2.forEach(function (button) {
+        button.addEventListener("click", function (event) {
+            let list = this.nextElementSibling;
+            if (list.style.display === "block") {
+                list.style.display = "none";
+            } else {
+                list.style.display = "block";
+            }
+            event.stopPropagation();
+        });
+    });
 
 
 }
@@ -101,6 +114,7 @@ function closeModal() {
     }
 }
 
+//Datum validering
 function validateDates() {
     let checkInDateInput = document.querySelector("#box3 input[type='date']");
     let checkOutDateInput = document.querySelectorAll("#box3 input[type='date']")[1];
@@ -110,7 +124,7 @@ function validateDates() {
 
     let errorbox1 = document.querySelector("#errorbox1");
 
-    
+
     if (checkOutDate < checkInDate) {
         errorbox1.innerText = "Utcheckningsdatumet kan inte vara före incheckningsdatumet!";
         errorbox1.style.display = "block";
@@ -123,6 +137,7 @@ function validateDates() {
 
 }
 
+// Vuxen validering
 function validateAdults(input, max, label) {
     let value = parseInt(input.value);
     let errorbox2 = document.querySelector("#errorbox2");
@@ -138,6 +153,7 @@ function validateAdults(input, max, label) {
     }
 }
 
+//Barn validering
 function validateChildren(input, max, label) {
     let value = parseInt(input.value);
     let errorbox3 = document.querySelector("#errorbox3");
@@ -153,6 +169,8 @@ function validateChildren(input, max, label) {
     }
 }
 
+
+//Rum validering
 function validateRooms(input, max) {
     let value = parseInt(input.value);
     let errorbox4 = document.querySelector("#errorbox4");
@@ -170,6 +188,7 @@ function validateRooms(input, max) {
 
 }
 
+//PRIS
 function calculatePrice(adults, children, rooms, days) {
 
     let errorbox5 = document.querySelector("#errorbox5");
@@ -178,64 +197,62 @@ function calculatePrice(adults, children, rooms, days) {
         errorbox5.style.display = "block";
         correctInfomation = false;
     } else {
-        errorbox5.innerText = ""; 
+        errorbox5.innerText = "";
         errorbox5.style.display = "none";
     }
 
-    // Pris per rum per natt
-    const baseRoomPrice = 1000;
+   
+    let baseRoomPrice = 1000;
 
-    // Pris per vuxen och per barn per natt
-    const pricePerAdult = 1000;
-    const pricePerChild = 300;
+    let pricePerAdult = 1000;
+    let pricePerChild = 300;
 
-    // Beräkna totalpriset baserat på antal rum, antal gäster och antal dagar
-    const totalPrice = (baseRoomPrice * rooms * days) + (pricePerAdult * adults * days) + (pricePerChild * children * days);
+    
+    let totalPrice = (baseRoomPrice * rooms * days) + (pricePerAdult * adults * days) + (pricePerChild * children * days);
 
     return totalPrice;
 }
 
+//Uppdaterar priset slay
 function updatePrice() {
-    const adultInput = parseInt(document.querySelector("#adultInput").value);
-    const childInput = parseInt(document.querySelector("#childInput").value);
-    const roomInput = parseInt(document.querySelector("#roomInput").value);
+    let adultInput = parseInt(document.querySelector("#adultInput").value);
+    let childInput = parseInt(document.querySelector("#childInput").value);
+    let roomInput = parseInt(document.querySelector("#roomInput").value);
 
-    const checkInDateInput = document.querySelector("#box3 input[type='date']");
-    const checkOutDateInput = document.querySelectorAll("#box3 input[type='date']")[1];
-    const checkInDate = new Date(checkInDateInput.value);
-    const checkOutDate = new Date(checkOutDateInput.value);
-    const days = Math.floor((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
+    let checkInDateInput = document.querySelector("#box3 input[type='date']");
+    let checkOutDateInput = document.querySelectorAll("#box3 input[type='date']")[1];
+    let checkInDate = new Date(checkInDateInput.value);
+    let checkOutDate = new Date(checkOutDateInput.value);
+    let days = Math.floor((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
 
     let adult = document.querySelectorAll(".adult");
     for (let i = 0; i < adult.length; i++) {
         adult[i].innerText = adultInput;
-    } 
+    }
 
     let child = document.querySelectorAll(".child");
     for (let i = 0; i < child.length; i++) {
         child[i].innerText = childInput;
-    } 
+    }
 
     let room2 = document.querySelectorAll(".room2");
     for (let i = 0; i < adult.length; i++) {
         room2[i].innerText = roomInput;
-    } 
+    }
 
+    let totalPrice = calculatePrice(adultInput, childInput, roomInput, days);
 
+    let priceElement = document.getElementById("price");
 
-    // Beräkna det totala priset
-    const totalPrice = calculatePrice(adultInput, childInput, roomInput, days);
-
-    const priceElement = document.getElementById("price");
-
-    const priceElement2 = document.getElementById("price2");
+    let priceElement2 = document.getElementById("price2");
 
     priceElement.innerHTML = "<b>Totalpris " + days + " nätter: </b><br>" + totalPrice + "kr";
 
-    priceElement2.innerHTML = "<b>Totalpris " + days + " nätter: </b><br>" + totalPrice + "kr"; 
+    priceElement2.innerHTML = "<b>Totalpris " + days + " nätter: </b><br>" + totalPrice + "kr";
 }
 
 
+// Validerar rum igen lol
 function validateRoom() {
     let roomInput = document.querySelector("#roomInput").value;
     let errorbox6 = document.querySelector("#errorbox6");
@@ -249,12 +266,13 @@ function validateRoom() {
     }
 }
 
+//Validerar natt
 function validateNight() {
-    const checkInDateInput = document.querySelector("#box3 input[type='date']");
-    const checkOutDateInput = document.querySelectorAll("#box3 input[type='date']")[1];
-    const checkInDate = new Date(checkInDateInput.value);
-    const checkOutDate = new Date(checkOutDateInput.value);
-    const days = Math.floor((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
+    let checkInDateInput = document.querySelector("#box3 input[type='date']");
+    let checkOutDateInput = document.querySelectorAll("#box3 input[type='date']")[1];
+    let checkInDate = new Date(checkInDateInput.value);
+    let checkOutDate = new Date(checkOutDateInput.value);
+    let days = Math.floor((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
 
     let errorbox7 = document.querySelector("#errorbox7");
 
@@ -268,11 +286,12 @@ function validateNight() {
     }
 }
 
+//Om det ej finns datum
 function noDate() {
-    const checkInDateInput = document.querySelector("#box3 input[type='date']");
-    const checkOutDateInput = document.querySelectorAll("#box3 input[type='date']")[1];
-    const checkInDate = checkInDateInput.value;
-    const checkOutDate = checkOutDateInput.value;
+    let checkInDateInput = document.querySelector("#box3 input[type='date']");
+    let checkOutDateInput = document.querySelectorAll("#box3 input[type='date']")[1];
+    let checkInDate = checkInDateInput.value;
+    let checkOutDate = checkOutDateInput.value;
 
     let errorbox8 = document.querySelector("#errorbox8");
 
@@ -286,12 +305,13 @@ function noDate() {
     }
 }
 
+//Hotell sök
 function showHotelBoxes() {
-    
+
 
     let hotelBoxes = document.querySelector("#hotellBoxes");
-    
-        hotelBoxes.style.display = "block";
+
+    hotelBoxes.style.display = "block";
 }
 
 function hideHotelBoxes() {
@@ -299,6 +319,7 @@ function hideHotelBoxes() {
     hotelBoxes.style.display = "none";
 }
 
+//Ingen info
 function noInfo() {
 
     let errorbox9 = document.querySelector("#errorbox9");
@@ -307,16 +328,4 @@ function noInfo() {
     errorbox9.style.display = "block";
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 

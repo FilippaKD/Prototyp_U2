@@ -226,9 +226,9 @@ dialog {
 }
 
 .information {
-    margin-left: 150px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-right: 150px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     margin-left: 150px;
 }
 
@@ -271,7 +271,7 @@ h1, #adress {
     background-color: rgba(143, 225, 20, 0.354);
     padding: 5px;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(20, 150, 20);
+    color: rgb(9, 69, 9);
     margin-top: 10px;
 }
 
@@ -493,14 +493,21 @@ h1, #adress {
 }
 
 
-.bArrow {
+.bArrow1 {
     width: 30px;
+    margin-left: 60px;
 }
 
-.listbutton:hover + .list {
-    display: block;
-    transform: 5s;
+.bArrow2 {
+    width: 30px;
+    margin-left: 2px;
 }
+
+.bArrow3 {
+    width: 30px;
+    margin-left: 25px;
+}
+
 
 .list {
     display: none;
@@ -610,32 +617,37 @@ h1, #adress {
 
 .boxbox {
     margin-left: 20px;
+    margin-right: 20px;
     width:200px;
+
 }
 
 #nameInput {
-    margin-left: 20px;
+    margin-left: 90px;
     margin-top: 20px;
-
+    width: 200px;
+    height: 17px;
 }
 
 #personalNumberInput {
-    margin-left: 20px;
+    margin-left: 7px;
     margin-top: 20px;
+    width: 200px;
+    height: 17px;
 }
 
 #countrySelect {
-    margin-left: 20px;
+    margin-left: 97px;
     margin-top: 20px;
 }
 
 #emailInput {
-    margin-left: 20px;
+    margin-left: 85px;
     margin-top: 20px;
 }
 
 #phoneInput {
-    margin-left: 20px;
+    margin-left: 80px;
     margin-top: 20px;
 }
 
@@ -675,6 +687,94 @@ h1, #adress {
     border-radius: 5px;
     margin-left: 1000px;
 }
+
+#errorbox10 {
+    display: none;
+    background-color: rgba(183, 40, 40, 0.874);
+    color: rgb(235, 213, 213);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(223, 184, 184) solid;
+    border-radius: 5px;
+    margin-left: 1000px;
+}
+
+#errorbox11 {
+    display: none;
+    background-color: rgba(183, 40, 40, 0.874);
+    color: rgb(235, 213, 213);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(223, 184, 184) solid;
+    border-radius: 5px;
+    margin-left: 1000px;
+}
+
+#errorbox12 {
+    display: none;
+    background-color: rgba(183, 40, 40, 0.874);
+    color: rgb(235, 213, 213);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(223, 184, 184) solid;
+    border-radius: 5px;
+    margin-left: 1000px;
+}
+
+#errorbox13 {
+    display: none;
+    background-color: rgba(183, 40, 40, 0.874);
+    color: rgb(235, 213, 213);
+    font-size: 13px;
+    padding: 5px;
+    border: 1px rgb(223, 184, 184) solid;
+    border-radius: 5px;
+    margin-left: 1000px;
+}
+
+#upheader {
+    display: flex;
+}
+
+#upbutton {
+    
+    gap: 10px;
+    margin-left: 780px;
+    display: flex;
+}
+
+.upbutton1 {
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 15px;
+     color: rgb(26, 26, 119);
+     border: none;
+     
+}
+
+#upbild {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border-radius: 20px;
+    border: 2px white solid;
+    background-color:  rgb(15, 15, 140);
+    margin-right: 5px;
+}
+
+#heart {
+    width: 40px;
+    height: 40px;
+    margin-top: 17px;
+}
+
+
+
+
+
 
 
 
